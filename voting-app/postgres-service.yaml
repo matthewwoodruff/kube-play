@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp
+  name: db
 spec:
   type: ClusterIP
   selector:
-    app: my-app-rc
+    app: postgres
   ports:
-  - port: 8080
-    targetPort: 80
+  - port: 5432
+    targetPort: 5432
